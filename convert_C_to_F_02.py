@@ -1,8 +1,9 @@
 # FILE NAME - convert_C_to_F_02.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Nicholas Sheppard
+# DATE: 09/30/2025
+# BRIEF DESCRIPTION: This program asks the user if they want to convert from Celsius to Fahrenhirit or from Fahrenheit to
+#Celsius, then converts properly based on their choice.
 
 
 
@@ -15,7 +16,29 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+def main():
+  C_to_F_converter()
 
+def C_to_F_converter():
+  print("===== Temperature Converter =====")
+  print()
+  print("  1. Convert from Celsius to Fahrenheit")
+  print("  2. Convert from Fahrenheit to Celsius")
+  print()
+  choice = int(input("Please choose from the above menu: "))
+  if choice == 1:
+    celsius = float(input("Enter a temperature to convert: "))
+    converted = celsius *9/5 + 32
+    print()
+    print(f"{celsius} degrees Celsius is {converted} degrees Fahrenheit.")
+  elif choice == 2:
+    fah = float(input("Enter a temperature to convert: "))
+    converted = (fah - 32) * 5/9
+    print()
+    print(f"{fah} degrees Fahrenheit is {converted} degrees Celsius.")
+
+
+main()
 
 
 
@@ -93,7 +116,8 @@ Enter a temperature to convert: -40
 
 1. What is one lesson you learned in this lab?
 
-
+I wasn't able to use a conditional if statement without converting the user's choice to an integer. Using 'if variable == 1' and 'elif variable == 2'
+would kick me out of the code block no matter what I chose. Once I converted the variable to an integer everything worked.
 
 
 
